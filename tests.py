@@ -1,5 +1,7 @@
 from functions import soma
 from functions import produto
+from functions import formatar_nome
+from functions import verificar_senha
 
 def test_soma_int():
     a = 10
@@ -41,4 +43,17 @@ def test_produto_string():
     b = "7"
     resultadoEsperado = 14
     resultado = produto(a, b)
+    assert resultado == resultadoEsperado
+
+def test_formatarNome():
+    nome = "João"
+    sobrenome = "Pedro"
+    resultadoEsperado = "João Pedro"
+    resultado = formatar_nome(nome, sobrenome)
+    assert resultado == resultadoEsperado
+
+def test_verificarSenha():
+    senha = "pAo12w#@swq121"
+    resultadoEsperado = True
+    resultado = verificar_senha(senha)
     assert resultado == resultadoEsperado

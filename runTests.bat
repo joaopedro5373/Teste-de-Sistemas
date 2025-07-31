@@ -1,1 +1,1 @@
-python -m pytest ./tests.py
+python -m pytest -v --cov=functions --cov-report html ./tests.py
